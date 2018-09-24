@@ -100,5 +100,7 @@ class CustomUserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 admin.site.register(CustomUser, CustomUserAdmin)
+# TODO: https://redmine.ungleich.ch/issues/5616
 admin.site.register(StripeCustomer)

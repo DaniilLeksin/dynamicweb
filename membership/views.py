@@ -98,6 +98,7 @@ class LoginRegistrationView(View):
                 email = form.validated_data.get('email')
                 password = form.validated_data.get('password')
                 name = form.validated_data.get('name')
+                # TODO: https://redmine.ungleich.ch/issues/5616
                 user = CustomUser.register(name, password, email)
                 if user:
                     return render(request, 'templates/success.html')

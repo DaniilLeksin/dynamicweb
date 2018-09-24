@@ -66,6 +66,7 @@ class LoginViewMixin(FormView):
         return super(LoginViewMixin, self).get(request, *args, **kwargs)
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 class ResendActivationLinkViewMixin(FormView):
     success_message = _(
         "An email with the activation link has been sent to you")
@@ -141,6 +142,7 @@ class PasswordResetViewMixin(FormView):
         return HttpResponseRedirect(self.get_success_url())
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 class PasswordResetConfirmViewMixin(FormView):
     form_class = SetPasswordForm
 

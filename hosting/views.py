@@ -222,6 +222,7 @@ class LoginView(HostingContextMixin, LoginViewMixin):
     success_url = reverse_lazy('hosting:dashboard')
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 class SignupView(HostingContextMixin, CreateView):
     template_name = 'hosting/signup.html'
     form_class = HostingUserSignupForm
@@ -275,6 +276,7 @@ class SignupValidateView(HostingContextMixin, TemplateView):
         return context
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 class SignupValidatedView(SignupValidateView, HostingContextMixin):
     template_name = "hosting/signup_validate.html"
 
@@ -345,6 +347,7 @@ class PasswordResetView(HostingContextMixin, PasswordResetViewMixin):
     template_email_path = 'hosting/emails/'
 
 
+# TODO: https://redmine.ungleich.ch/issues/5616
 class PasswordResetConfirmView(HostingContextMixin,
                                PasswordResetConfirmViewMixin):
     template_name = 'hosting/confirm_reset_password.html'
