@@ -37,8 +37,8 @@ urlpatterns += i18n_patterns(
 
 # note the django CMS URLs included via i18n_patterns
 REDIRECT_TO_CMS = False
-if Page.objects.filter(site_id=Site.objects.get_current().id).count():
-    REDIRECT_TO_CMS = True
+# if Page.objects.filter(site_id=Site.objects.get_current().id).count():
+#     REDIRECT_TO_CMS = True
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),

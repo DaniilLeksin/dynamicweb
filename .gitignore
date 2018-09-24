@@ -43,3 +43,12 @@ secret-key
 # to keep empty dirs
 !.gitkeep
 *.orig
+
+# ignore list for https://redmine.ungleich.ch/issues/5616
+.Python
+bin/
+include/
+lib/
+pip-selfcheck.json
+share/
+
